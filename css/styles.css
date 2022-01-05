@@ -1,0 +1,100 @@
+:root {
+  --activated-text-color: #2196f3;
+  --general-text-color: #757575;
+  --title-text-color: #212121;
+  --hero-text-color: #ffffff;
+  --contact-text-color: rgba(255, 255, 255, 0.6);
+  --header-bg-color: #ffffff;
+  --footer-bg-color: #2f303a;
+  --primary-bg-color: #e5e5e5;
+  --secondary-bg-color: #f5f4fa;
+  --button-bg-color: #2196f3;
+}
+/* Общий CSS - начало */
+body {
+  color: var(--general-text-color);
+  background-color: var(--primary-bg-color);
+}
+/* -------header CSS */
+header {
+  background-color: var(--header-bg-color);
+}
+/* логотип в header*/
+.h-logo {
+  color: var(--title-text-color);
+}
+.logo-begin {
+  color: var(--activated-text-color);
+}
+/* навигация по сайту */
+.nav-list .link {
+  color: var(--title-text-color);
+}
+
+.nav-list .link:hover,
+.nav-list .link:focus {
+  color: var(--activated-text-color);
+}
+/* контакты в шапке */
+.h-contact-list .link {
+  color: var(--general-text-color);
+}
+
+.h-contact-list .link:hover,
+.h-contact-list .link:focus {
+  color: var(--activated-text-color);
+}
+/* -------footer CSS */
+footer {
+  background-color: var(--footer-bg-color);
+}
+/* логотип в footer */
+.f-logo {
+  color: var(--hero-text-color);
+}
+/* контакты в footer */
+.f-contact-list .link {
+  color: var(--contact-text-color);
+}
+
+.f-contact-list .contact-address {
+  color: var(--hero-text-color);
+}
+
+.f-contact-list .link:hover,
+.f-contact-list .link:focus,
+.f-contact-list .contact-address:hover,
+.f-contact-list .contact-address:focus {
+  color: var(--activated-text-color);
+}
+/* Общий CSS - конец */
+/* ----------------------- */
+/* index.html CSS - начало */
+h2,
+h3 {
+  color: var(--title-text-color);
+}
+
+/* секция герой */
+.hero {
+  background-color: var(--footer-bg-color);
+}
+
+.hero-title {
+  color: var(--hero-text-color);
+}
+
+.button {
+  color: var(--hero-text-color);
+  background-color: var(--button-bg-color);
+}
+/* секция преимущества и секция галерея*/
+.advantage,
+.gallery {
+  background-color: var(--header-bg-color);
+}
+/* секция наша команда */
+.our-team {
+  background-color: var(--secondary-bg-color);
+}
+/* index.html CSS - конец */
