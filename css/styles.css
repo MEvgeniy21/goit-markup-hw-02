@@ -12,13 +12,37 @@
 }
 /* Общий CSS - начало */
 body {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
   color: var(--general-text-color);
   background-color: var(--primary-bg-color);
 }
+/* общие свойства списков */
+.list {
+  list-style: none;
+}
+/* ощие свойства для ссылок */
+.link {
+  text-decoration: none;
+}
+/* общие свойства логотипа */
+.g-logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.g-logo:hover,
+.g-logo:focus {
+  text-decoration: underline;
+}
+
 /* -------header CSS */
-header {
+.head {
   background-color: var(--header-bg-color);
 }
+
 /* логотип в header*/
 .h-logo {
   color: var(--title-text-color);
@@ -26,26 +50,33 @@ header {
 .logo-begin {
   color: var(--activated-text-color);
 }
+
+/* общие свойства списков в шапке */
+.head .list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
 /* навигация по сайту */
 .nav-list .link {
   color: var(--title-text-color);
 }
 
-.nav-list .link:hover,
-.nav-list .link:focus {
-  color: var(--activated-text-color);
-}
 /* контакты в шапке */
 .h-contact-list .link {
   color: var(--general-text-color);
 }
 
+/* общие свойства актив-ссылок в шапке*/
+.nav-list .link:hover,
+.nav-list .link:focus,
 .h-contact-list .link:hover,
 .h-contact-list .link:focus {
   color: var(--activated-text-color);
 }
 /* -------footer CSS */
-footer {
+.foot {
   background-color: var(--footer-bg-color);
 }
 /* логотип в footer */
@@ -54,6 +85,8 @@ footer {
 }
 /* контакты в footer */
 .f-contact-list .link {
+  font-size: 14px;
+  line-height: 1.71;
   color: var(--contact-text-color);
 }
 
@@ -61,6 +94,7 @@ footer {
   color: var(--hero-text-color);
 }
 
+/* общие свойства актив-ссылок в футере*/
 .f-contact-list .link:hover,
 .f-contact-list .link:focus,
 .f-contact-list .contact-address:hover,
@@ -70,9 +104,17 @@ footer {
 /* Общий CSS - конец */
 /* ----------------------- */
 /* index.html CSS - начало */
-h2,
-h3 {
+
+/* общие свойства заголовков h2, h3 */
+.title {
+  font-weight: 700;
   color: var(--title-text-color);
+}
+
+h2.title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 /* секция герой */
@@ -81,20 +123,54 @@ h3 {
 }
 
 .hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--hero-text-color);
 }
-
+/* кнопка */
 .button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
   color: var(--hero-text-color);
   background-color: var(--button-bg-color);
+  cursor: pointer;
 }
 /* секция преимущества и секция галерея*/
 .advantage,
 .gallery {
   background-color: var(--header-bg-color);
 }
+
+/* свойства текста в секции преимуществ */
+.advantage h3.title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantage .text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
 /* секция наша команда */
 .our-team {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
   background-color: var(--secondary-bg-color);
 }
+
+.our-team h3.title {
+  font-weight: 500;
+}
+
 /* index.html CSS - конец */
