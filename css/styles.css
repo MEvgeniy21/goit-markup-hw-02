@@ -63,6 +63,14 @@ body {
   color: var(--title-text-color);
 }
 
+.link.active {
+  color: var(--activated-text-color);
+}
+
+.link.active:hover,
+.link.active:focus {
+  text-decoration: underline;
+}
 /* контакты в шапке */
 .h-contact-list .link {
   color: var(--general-text-color);
@@ -132,7 +140,7 @@ h2.title {
   color: var(--hero-text-color);
 }
 /* кнопка */
-.button {
+.btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -142,6 +150,12 @@ h2.title {
   color: var(--hero-text-color);
   background-color: var(--button-bg-color);
   cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--title-text-color);
+  background-color: var(--secondary-bg-color);
 }
 /* секция преимущества и секция галерея*/
 .advantage,
@@ -174,3 +188,40 @@ h2.title {
 }
 
 /* index.html CSS - конец */
+/* ----------------------- */
+/* portfolio.html CSS - начало */
+.hero-prtfl {
+  background-color: var(--header-bg-color);
+}
+/* кнопки фильтра */
+.btn-prtfl {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: var(--title-text-color);
+  background-color: var(--secondary-bg-color);
+  cursor: pointer;
+}
+
+.btn-prtfl:hover,
+.btn-prtfl:focus {
+  color: var(--hero-text-color);
+  background-color: var(--button-bg-color);
+}
+
+/* заголовок портфолио (h2) */
+.hero-prtfl .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+/* текст портфолио */
+.hero-prtfl .text {
+  font-size: 16px;
+  line-height: 1.88;
+}
+/* portfolio.html CSS - конец */
