@@ -1,21 +1,21 @@
 :root {
-  --activated-text-color: #2196f3;
+  --activated-color: #2196f3;
   --general-text-color: #757575;
   --title-text-color: #212121;
-  --hero-text-color: #ffffff;
+  --primary-color: #ffffff;
   --contact-text-color: rgba(255, 255, 255, 0.6);
-  --header-bg-color: #ffffff;
   --footer-bg-color: #2f303a;
-  --primary-bg-color: #e5e5e5;
   --secondary-bg-color: #f5f4fa;
-  --button-bg-color: #2196f3;
+  --button-hover-color: #188ce8;
 }
 /* Общий CSS - начало */
 body {
   font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--general-text-color);
-  background-color: var(--primary-bg-color);
+  background-color: var(--primary-color);
 }
 /* общие свойства списков */
 .list {
@@ -26,88 +26,74 @@ body {
   text-decoration: none;
 }
 /* общие свойства логотипа */
-.g-logo {
+.logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 
-.g-logo:hover,
-.g-logo:focus {
-  text-decoration: underline;
-}
-
 /* -------header CSS */
-.head {
-  background-color: var(--header-bg-color);
-}
 
 /* логотип в header*/
-.h-logo {
+.header-logo {
   color: var(--title-text-color);
 }
 .logo-begin {
-  color: var(--activated-text-color);
+  color: var(--activated-color);
 }
 
 /* общие свойства списков в шапке */
-.head .list {
+.header .list {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 /* навигация по сайту */
-.nav-list .link {
+.navigation .link {
   color: var(--title-text-color);
 }
 
-.link.active {
-  color: var(--activated-text-color);
-}
-
-.link.active:hover,
-.link.active:focus {
-  text-decoration: underline;
-}
 /* контакты в шапке */
-.h-contact-list .link {
+.header-contact .link {
   color: var(--general-text-color);
 }
 
 /* общие свойства актив-ссылок в шапке*/
-.nav-list .link:hover,
-.nav-list .link:focus,
-.h-contact-list .link:hover,
-.h-contact-list .link:focus {
-  color: var(--activated-text-color);
+.link.active,
+.navigation .link:hover,
+.navigation .link:focus,
+.header-contact .link:hover,
+.header-contact .link:focus {
+  color: var(--activated-color);
 }
 /* -------footer CSS */
-.foot {
+.footer {
   background-color: var(--footer-bg-color);
 }
 /* логотип в footer */
-.f-logo {
-  color: var(--hero-text-color);
+.footer-logo {
+  color: var(--primary-color);
 }
 /* контакты в footer */
-.f-contact-list .link {
-  font-size: 14px;
-  line-height: 1.71;
+.address {
+  font-style: inherit;
+}
+
+.footer-contact .link {
   color: var(--contact-text-color);
 }
 
-.f-contact-list .contact-address {
-  color: var(--hero-text-color);
+.footer-contact .contact-address {
+  color: var(--primary-color);
 }
 
 /* общие свойства актив-ссылок в футере*/
-.f-contact-list .link:hover,
-.f-contact-list .link:focus,
-.f-contact-list .contact-address:hover,
-.f-contact-list .contact-address:focus {
-  color: var(--activated-text-color);
+.footer-contact .link:hover,
+.footer-contact .link:focus,
+.footer-contact .contact-address:hover,
+.footer-contact .contact-address:focus {
+  color: var(--activated-color);
 }
 /* Общий CSS - конец */
 /* ----------------------- */
@@ -119,7 +105,9 @@ body {
   color: var(--title-text-color);
 }
 
-h2.title {
+.advantage-title,
+.gallery-title,
+.team-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -137,90 +125,92 @@ h2.title {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--hero-text-color);
+  color: var(--primary-color);
 }
 /* кнопка */
-.btn {
+.hero-btn {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: var(--hero-text-color);
-  background-color: var(--button-bg-color);
+  color: var(--primary-color);
+  background-color: var(--activated-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.btn:hover,
-.btn:focus {
-  color: var(--title-text-color);
-  background-color: var(--secondary-bg-color);
-}
-/* секция преимущества и секция галерея*/
-.advantage,
-.gallery {
-  background-color: var(--header-bg-color);
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--button-hover-color);
 }
 
-/* свойства текста в секции преимуществ */
-.advantage h3.title {
-  font-size: 14px;
+/* секции преимуществ */
+.advantage-list .title {
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.advantage .text {
-  font-size: 14px;
-  line-height: 1.71;
-}
-
 /* секция наша команда */
-.our-team {
+.team {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   background-color: var(--secondary-bg-color);
 }
 
-.our-team h3.title {
+.team-list .title {
   font-weight: 500;
 }
 
+.team-list .item {
+  background-color: var(--primary-color);
+}
 /* index.html CSS - конец */
 /* ----------------------- */
 /* portfolio.html CSS - начало */
-.hero-prtfl {
-  background-color: var(--header-bg-color);
-}
+
 /* кнопки фильтра */
-.btn-prtfl {
+.portfolio-btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.btn-prtfl:hover,
-.btn-prtfl:focus {
-  color: var(--hero-text-color);
-  background-color: var(--button-bg-color);
+.filtr-active {
+  color: var(--primary-color);
+  background-color: var(--activated-color);
 }
 
-/* заголовок портфолио (h2) */
-.hero-prtfl .title {
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  color: var(--primary-color);
+  background-color: var(--activated-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+/* список портфолио */
+.portfolio-list .title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  text-align: left;
 }
 
-/* текст портфолио */
-.hero-prtfl .text {
+.portfolio-list .text {
   font-size: 16px;
   line-height: 1.88;
 }
